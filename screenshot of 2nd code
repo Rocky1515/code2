@@ -1,0 +1,19 @@
+//This function calculates the average number of catches
+
+function averageCatches(list) {
+  
+  var sum = 0;
+  var average = 0;
+  var quarters = 4;
+  console.log(list);
+    for (var i = 0; i < list.length; i++) {
+      sum = sum + list[i];
+
+   }
+       console.log(sum);
+        average = sum / quarters;
+
+  setText("gameAverageOutput", average);
+
+}
+console.log(averageCatches());
