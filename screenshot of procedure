@@ -1,0 +1,33 @@
+//This function takes the number of catches and puts them in a list 
+
+function grabCatch() {
+    var catches = [];
+    insertItem(catches, 0, getNumber("quarter1Stats"));
+    insertItem(catches, 1, getNumber("quarter2Stats"));
+    insertItem(catches, 2, getNumber("quarter3Stats"));
+    insertItem(catches, 3, getNumber("quarter4Stats"));
+   
+    console.log(catches);
+    averageCatches(catches);
+}
+console.log(grabCatch());
+
+//This function calculates the average number of catches
+
+function averageCatches(list) {
+  
+  var sum = 0;
+  var average = 0;
+  var quarters = 4;
+  console.log(list);
+    for (var i = 0; i < list.length; i++) {
+      sum = sum + list[i];
+
+   }
+       console.log(sum);
+        average = sum / quarters;
+
+  setText("gameAverageOutput", average);
+
+}
+console.log(averageCatches());
